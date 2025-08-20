@@ -1,0 +1,39 @@
+/* headings  font */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+/* subheading and body */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #03001C
+  
+}
+
+/* custom components */
+@layer components {
+  h1 {
+    @apply font-heading text-heading text-secondary;
+  }
+
+  p {
+    @apply font-body text-body text-secondary z-0 opacity-80 ;
+     /* Slightly lighter than h1 */
+  }
+  li {
+    @apply font-heading text-body text-secondary  cursor-pointer hover:underline transition-all;
+  }
+  .btn {
+    @apply bg-accent text-white py-3 px-6 rounded-xl text-base font-medium cursor-pointer transition-all duration-300 ease-in-out shadow-lg -translate-y-0.5 font-body tracking-wide hover:scale-105;
+    box-shadow: 0 6px 16px rgba(59, 33, 74, 0.6), 0 6px 16px rgba(59, 33, 74, 0.6);
+  }
+}
